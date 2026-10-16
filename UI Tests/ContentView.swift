@@ -72,6 +72,20 @@ struct ContentView: View {
                         SubPictureItem(description: "Carbs",  image: "takeoutbag.and.cup.and.straw.fill", color: .orange, data: $carbs)
                         SubPictureItem(description: "Fats",  image: "oilcan.fill", color: .cyan, data: $fats)
                     }
+                    
+                    HStack(spacing: 2) {
+                        Image(systemName: "flame.fill")
+                            .foregroundStyle(.orange)
+                        Text("4")
+                    }
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 4)
+                    .background(Color.gray.opacity(0.3))
+                    .clipShape(RoundedRectangle(cornerRadius: 32))
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 32)
+                            .stroke(.red)
+                    }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
