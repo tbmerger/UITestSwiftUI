@@ -64,27 +64,15 @@ struct ContentView: View {
                     }
                     .frame(height: 300)
                     
-                    
-                    
                     HStack(spacing: 20) {
                         SubPictureItem(description: "Calories", image: "drop.fill", color: .black, data: $calories)
                         SubPictureItem(description: "Protein",  image: "fish.fill", color: .red, data: $protein)
                         SubPictureItem(description: "Carbs",  image: "takeoutbag.and.cup.and.straw.fill", color: .orange, data: $carbs)
                         SubPictureItem(description: "Fats",  image: "oilcan.fill", color: .cyan, data: $fats)
                     }
-                    
-                    HStack(spacing: 2) {
-                        Image(systemName: "flame.fill")
-                            .foregroundStyle(.orange)
-                        Text("4")
-                    }
-                    .padding(.horizontal, 8)
-                    .padding(.vertical, 4)
-                    .background(Color.gray.opacity(0.3))
-                    .clipShape(RoundedRectangle(cornerRadius: 32))
-                    .overlay {
-                        RoundedRectangle(cornerRadius: 32)
-                            .stroke(.red)
+                    HStack {
+                        ButtonReactions(countReactions: 3, isSelected: true)
+                        ButtonReactions(countReactions: 1, icon: "hands.clap.fill")
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)

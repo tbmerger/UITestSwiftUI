@@ -11,7 +11,7 @@ struct TopHorizontalScroll: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack(spacing: 26) {
-                ForEach(1...20, id:\.self) { index in
+                ForEach(1...10, id:\.self) { index in
                     VStack {
                         Image("lion1")
                             .resizable()
@@ -30,7 +30,7 @@ struct TopHorizontalScroll: View {
                 }
             }
         }
-        .frame(height: 70)        
+        .frame(height: 70)
     }
 }
 
