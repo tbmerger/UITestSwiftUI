@@ -17,7 +17,7 @@ struct TopHorizontalScroll: View {
                             .resizable()
                             .scaledToFill()
                             .frame(width: 50, height: 50)
-                            .clipShape(.capsule)
+                            .clipShape(.circle)
                             .overlay(alignment: .bottom) {
                                 Text("🔥 \(index)")
                                     .font(.system(size: 10))

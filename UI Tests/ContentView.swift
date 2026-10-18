@@ -73,6 +73,20 @@ struct ContentView: View {
                     HStack {
                         ButtonReactions(countReactions: 3, isSelected: true)
                         ButtonReactions(countReactions: 1, icon: "hands.clap.fill")
+                        Spacer()
+                        
+                        HStack(spacing: -7.5) {
+                            UserImageCircle()
+                            UserImageCircle()
+                        }
+                        
+                        Spacer()
+                        
+                        Image(systemName: "text.bubble")
+                            .foregroundStyle(Color.green)
+                            .frame(width: 5, height: 5)
+                        
+                        Text("2")
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
