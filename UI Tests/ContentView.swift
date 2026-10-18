@@ -75,18 +75,23 @@ struct ContentView: View {
                         ButtonReactions(countReactions: 1, icon: "hands.clap.fill")
                         Spacer()
                         
-                        HStack(spacing: -7.5) {
-                            UserImageCircle()
-                            UserImageCircle()
+                        HStack(spacing: 10) {
+                            
+                            HStack(spacing: -7.5) {
+                                UserImageCircle()
+                                UserImageCircle()
+                            }
+                            
+                            Spacer()
+                            
+                            Image(systemName: "text.bubble")
+                                .foregroundStyle(Color.green)
+                                .frame(width: 5, height: 5)
+                            
+                            Text("2")
+                                .foregroundStyle(.gray)
                         }
-                        
-                        Spacer()
-                        
-                        Image(systemName: "text.bubble")
-                            .foregroundStyle(Color.green)
-                            .frame(width: 5, height: 5)
-                        
-                        Text("2")
+                        .border(.red)
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
