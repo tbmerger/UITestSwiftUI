@@ -71,8 +71,10 @@ struct ContentView: View {
                         SubPictureItem(description: "Fats",  image: "oilcan.fill", color: .cyan, data: $fats)
                     }
                     HStack {
-                        ButtonReactions(countReactions: 3, isSelected: true)
-                        ButtonReactions(countReactions: 1, icon: "hands.clap.fill")
+                        HStack {
+                            ButtonReactions(countReactions: 3, isSelected: true)
+                            ButtonReactions(countReactions: 1, icon: "hands.clap.fill", buttonWidth: 1)
+                        }
                         Spacer()
                         
                         HStack(spacing: 10) {
@@ -81,18 +83,49 @@ struct ContentView: View {
                                 UserImageCircle()
                                 UserImageCircle()
                             }
-                            
-                            Spacer()
-                            
+                                                        
                             Image(systemName: "text.bubble")
-                                .foregroundStyle(Color.green)
-                                .frame(width: 5, height: 5)
+                                .font(.system(size: 14))
+                                .foregroundStyle(.gray)
+                                .padding(.leading, -3)
+                                .padding(.trailing, -4)
                             
                             Text("2")
                                 .foregroundStyle(.gray)
                         }
-                        .border(.red)
                     }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    Divider()
+                        .padding(.top, 10)
+                    
+                    HStack(spacing: 80) {
+                        HStack {
+                            Image(systemName: "face.smiling")
+                                .font(.system(size: 14))
+                                .foregroundStyle(.gray)
+                                .padding(.leading, -3)
+                                .padding(.trailing, -4)
+                            
+                            Text("React")
+                                .foregroundStyle(.black.opacity(0.6))
+                                .font(.system(size: 16))
+                        }
+                        
+                        HStack {
+                            Image(systemName: "text.bubble")
+                                .font(.system(size: 14))
+                                .foregroundStyle(.gray)
+                                .padding(.leading, -3)
+                                .padding(.trailing, -4)
+                            
+                            Text("Comment")
+                                .foregroundStyle(.black.opacity(0.6))
+                                .font(.system(size: 16))
+                        }
+                        
+                    }
+                    .frame(maxWidth: .infinity)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
