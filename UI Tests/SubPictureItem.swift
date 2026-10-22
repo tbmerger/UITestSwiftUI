@@ -19,7 +19,7 @@ struct SubPictureItem: View {
                     Image(systemName: image)
                         .font(.system(size: 12))
                     Text(description)
-                        .font(.system(size: 16, weight: .bold))
+                        .font(.system(size: 14, weight: .bold))
                 }
                 .foregroundStyle(color)
                 
