@@ -51,6 +51,8 @@ struct BottomNavigationBar: View {
                     .buttonStyle(.plain)
                 }
             }
+            .padding(.horizontal, 5)
+            .background(.white, in: Capsule())
             
             // Круглая кнопка добавления
             Button(action: onAdd) {
@@ -63,17 +65,7 @@ struct BottomNavigationBar: View {
             
         }
         .padding(.horizontal, 5)
-        .background(.white, in: Capsule())
         .shadow(color: .black.opacity(0.08), radius: 10, y: 3)
-        
-        // Круглая кнопка добавления
-//        Button(action: onAdd) {
-//            Image(systemName: "plus")
-//                .font(.system(size: 25, weight: .medium))
-//                .foregroundStyle(.white)
-//                .frame(width: 62, height: 62)
-//                .background(.black, in: .circle)
-//        }
     }
 }
 
