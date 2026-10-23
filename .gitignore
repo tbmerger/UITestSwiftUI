@@ -1,1 +1,26 @@
+
+# Xcode user settings
 xcuserdata/
+*.xcuserstate
+
+# Build products
+build/
+DerivedData/
+*.ipa
+*.dSYM
+*.dSYM.zip
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Swift Package Manager build artifacts
+.build/
+
+# Xcode temporary files
+*.hmap
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
